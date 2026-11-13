@@ -13,10 +13,7 @@ namespace MunicipalServicesApp
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
@@ -44,21 +41,23 @@ namespace MunicipalServicesApp
             this.btnReportIssues.UseVisualStyleBackColor = true;
             this.btnReportIssues.Click += new System.EventHandler(this.btnReportIssues_Click);
 
-            this.btnLocalEvents.Enabled = false;
+            this.btnLocalEvents.Enabled = true;
             this.btnLocalEvents.Location = new Point(150, 160);
             this.btnLocalEvents.Name = "btnLocalEvents";
             this.btnLocalEvents.Size = new Size(200, 40);
             this.btnLocalEvents.TabIndex = 2;
             this.btnLocalEvents.Text = "Local Events and Announcements";
             this.btnLocalEvents.UseVisualStyleBackColor = true;
+            this.btnLocalEvents.Click += new System.EventHandler(this.btnLocalEvents_Click);
 
-            this.btnServiceStatus.Enabled = false;
+            this.btnServiceStatus.Enabled = true;
             this.btnServiceStatus.Location = new Point(150, 220);
             this.btnServiceStatus.Name = "btnServiceStatus";
             this.btnServiceStatus.Size = new Size(200, 40);
             this.btnServiceStatus.TabIndex = 3;
             this.btnServiceStatus.Text = "Service Request Status";
             this.btnServiceStatus.UseVisualStyleBackColor = true;
+            this.btnServiceStatus.Click += new System.EventHandler(this.btnServiceStatus_Click);
 
             this.AutoScaleDimensions = new SizeF(6F, 13F);
             this.AutoScaleMode = AutoScaleMode.Font;

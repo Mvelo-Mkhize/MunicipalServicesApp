@@ -12,9 +12,26 @@ namespace MunicipalServicesApp
 
         private void btnReportIssues_Click(object sender, EventArgs e)
         {
-            ReportIssuesForm reportForm = new ReportIssuesForm();
-            reportForm.ShowDialog();
+            using (ReportIssuesForm reportForm = new ReportIssuesForm())
+            {
+                reportForm.ShowDialog();
+            }
         }
 
+        private void btnLocalEvents_Click(object sender, EventArgs e)
+        {
+            using (EventsForm eventsForm = new EventsForm())
+            {
+                eventsForm.ShowDialog();
+            }
+        }
+
+        private void btnServiceStatus_Click(object sender, EventArgs e)
+        {
+            using (ServiceStatusForm statusForm = new ServiceStatusForm())
+            {
+                statusForm.ShowDialog();
+            }
+        }
     }
 }
